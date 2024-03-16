@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function playHiddenAudio() {
         const audio = new Audio('happy_birthday_song.mp3');
-        audio.play();
+        audio.play().catch(error => {
+            console.error('Error playing audio:', error);
+        });
     }
 });
